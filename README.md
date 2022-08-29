@@ -10,7 +10,7 @@
 ## About Project
 Open the file with your IDE or editor, next write the command bellow:<br>
 <strong>php artisan serve</strong> <br>
-to start a server on your computer.
+to start a local server on your computer.
 
 ## Contributing
 
