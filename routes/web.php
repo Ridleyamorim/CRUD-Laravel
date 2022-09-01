@@ -15,9 +15,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/series');
 });
 
-Route::get('/series', [SeriesController::class, 'index']);
-Route::get('/series/criar', [SeriesController::class, 'create']);
-Route::post('/series/salvar', [SeriesController::class, 'store']);
+Route::resource('/series', SeriesController::class)
+    ->only(['index', 'create', 'store']);
+
+Route::post('/series/destroy/{id}', [SeriesController::class, 'destroy'])
+    ->name('series.destroy');
+
+// Route::controller(SeriesController::class, function () {
+//     Route::get('/series', 'index')->name('series.index');
+//     Route::get('/series/create', 'create')->name('series.create');
+//     Route::post('/series/store', 'store')->name('series.store');
+//     Route::delete('/series/destroy/{id}', 'delete')->name('series.destroy');
+// });
+
