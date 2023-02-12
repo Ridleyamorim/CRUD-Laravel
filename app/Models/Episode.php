@@ -9,6 +9,8 @@ class Episode extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['number'];
+
     public $timestamps = false;
 
     public function season()

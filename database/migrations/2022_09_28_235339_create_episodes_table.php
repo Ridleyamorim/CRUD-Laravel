@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('episodes', function (Blueprint $table) {
             $table->id();
-            $table->unsignedTinyInteger('numero');
+            $table->unsignedTinyInteger('number');
             $table->unsignedBigInteger('season_id');
-            $table->foreign('season_id')->references('id')->on('season');
+            $table->foreign('season_id')->references('id')->on('season')->onDelete('cascade');
         });
     }
 
