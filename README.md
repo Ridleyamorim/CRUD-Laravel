@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Project
+## About Project in progress
 Open the file with your IDE or editor, next write the command bellow:<br>
 <strong>php artisan serve</strong> <br>
 to start a local server on your computer.
